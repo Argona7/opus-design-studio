@@ -1,0 +1,15 @@
+{
+  "name": "design-studio-kit",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test/test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.0"
+  }
+}

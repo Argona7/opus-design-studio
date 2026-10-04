@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+html,body{margin:0;width:1920px;height:1080px;background:#101010;overflow:hidden}
+#a{position:absolute;left:0;top:200px;width:200px;height:200px;background:#ff3b30;animation:mv 4s linear forwards}
+#b{position:absolute;left:0;top:500px;width:200px;height:200px;background:#34c759;display:none;animation:mv 2s linear forwards}
+@keyframes mv{from{transform:translateX(0)}to{transform:translateX(1600px)}}
+canvas{position:absolute;left:0;top:800px}
+</style></head><body><div id="a"></div><div id="b"></div><canvas id="c" width="1920" height="200"></canvas>
+<script>
+const t0=performance.now(),g=document.getElementById('c').getContext('2d');
+(function loop(){const t=(performance.now()-t0)/1000;g.fillStyle='#101010';g.fillRect(0,0,1920,200);g.fillStyle='#0a84ff';g.fillRect(Math.min(t/4,1)*1600,0,200,200);requestAnimationFrame(loop)})();
+setTimeout(()=>{document.getElementById('b').style.display='block'},2000);
+</script></body></html>
